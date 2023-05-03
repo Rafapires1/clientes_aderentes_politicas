@@ -1,0 +1,41 @@
+﻿chave;Perfil;Classe;Politica;cod_perfil;cod_classe
+1;conservador;Renda Fixa Pós-Fixada;0.70;110;101
+2;conservador;Renda Fixa Inflação;0.12;110;102
+3;conservador;Renda Fixa Pré-Fixada;0.05;110;103
+4;conservador;Renda Variável;0.02;110;104
+5;conservador;Multimercado;0.09;110;105
+6;conservador;Alternativos;0.00;110;106
+7;conservador;Internacional;0.02;110;107
+8;conservador;Saldo em Conta;0.00;110;108
+9;moderado-conservador;Renda Fixa Pós-Fixada;0.46;120;101
+10;moderado-conservador;Renda Fixa Inflação;0.16;120;102
+11;moderado-conservador;Renda Fixa Pré-Fixada;0.08;120;103
+12;moderado-conservador;Renda Variável;0.04;120;104
+13;moderado-conservador;Multimercado;0.21;120;105
+14;moderado-conservador;Alternativos;0.00;120;106
+15;moderado-conservador;Internacional;0.05;120;107
+16;moderado-conservador;Saldo em Conta;0.00;120;108
+17;moderado;Renda Fixa Pós-Fixada;0.30;130;101
+18;moderado;Renda Fixa Inflação;0.24;130;102
+19;moderado;Renda Fixa Pré-Fixada;0.10;130;103
+20;moderado;Renda Variável;0.07;130;104
+21;moderado;Multimercado;0.22;130;105
+22;moderado;Alternativos;0.00;130;106
+23;moderado;Internacional;0.07;130;107
+24;moderado;Saldo em Conta;0.00;130;108
+25;moderado-agressivo;Renda Fixa Pós-Fixada;0.15;140;101
+26;moderado-agressivo;Renda Fixa Inflação;0.20;140;102
+27;moderado-agressivo;Renda Fixa Pré-Fixada;0.11;140;103
+28;moderado-agressivo;Renda Variável;0.14;140;104
+29;moderado-agressivo;Multimercado;0.30;140;105
+30;moderado-agressivo;Alternativos;0.00;140;106
+31;moderado-agressivo;Internacional;0.10;140;107
+32;moderado-agressivo;Saldo em Conta;0.00;140;108
+33;agressivo;Renda Fixa Pós-Fixada;0.05;150;101
+34;agressivo;Renda Fixa Inflação;0.19;150;102
+35;agressivo;Renda Fixa Pré-Fixada;0.10;150;103
+36;agressivo;Renda Variável;0.20;150;104
+37;agressivo;Multimercado;0.31;150;105
+38;agressivo;Alternativos;0.00;150;106
+39;agressivo;Internacional;0.15;150;107
+40;agressivo;Saldo em Conta;0.00;150;108
