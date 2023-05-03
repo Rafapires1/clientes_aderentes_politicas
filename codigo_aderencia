@@ -1,0 +1,77 @@
+CREATE DATABASE case_investimento;
+CREATE SCHEMA public;
+
+CREATE TABLE public.fake_position1 (
+    chave INTEGER PRIMARY KEY,
+account_code INTEGER,
+    account_suitability VARCHAR(100),
+    asset_name VARCHAR(100),
+class_name VARCHAR(100),
+position_value FLOAT,
+cod_perfil INTEGER,
+    cod_classe INTEGER
+);
+
+CREATE TABLE public.fake_allocation_policies1 (
+    chave INTEGER PRIMARY KEY,
+Perfil VARCHAR(100),
+    Classe VARCHAR(100),
+Politica FLOAT,
+cod_perfil INTEGER,
+    cod_classe INTEGER
+);
+
+
+copy public.fake_position1
+from 'C:\Users\arthu\Downloads\fake_position_tratado.csv'
+delimiter ';'
+csv header;
+
+copy public.fake_allocation_policies1
+from 'C:\Users\arthu\Downloads\fake_allocation_policies_tratada.csv'
+delimiter ';'
+csv header;
+
+
+with base as (select
+a.*,
+b.politica
+
+from public.fake_position1 as a
+left join public.fake_allocation_policies1 as b
+on a.cod_perfil = b.cod_perfil and a.cod_classe = b.cod_classe
+order by 2),
+
+total as (select
+account_code,
+sum(position_value) as total_cliente
+from base
+group by 1),
+
+comparativo_realizado_politicas as (select
+a.account_code,
+a.account_suitability,
+a.class_name,
+sum(a.position_value)/b.total_cliente as representatividade,
+a.politica as politica
+
+from base as a
+left join total as b on a.account_code = b.account_code
+group by 1,2,3, b.total_cliente,5
+order by 1),
+
+desvio as (select
+account_code,
+class_name,
+POWER((representatividade-politica),2) as desvio
+
+from comparativo_realizado_politicas
+group by 1,2,3)
+
+select
+account_code,
+sqrt(sum(desvio))
+
+from desvio
+group by 1
+order by 1
